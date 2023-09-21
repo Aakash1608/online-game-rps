@@ -1,0 +1,62 @@
+.gameboard {
+    width: 100%;
+    padding: 2vh 2vw;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.game-screen-1 {
+    width: 40%;
+    display: grid;
+    place-items: center;
+}
+.game-screen-2 {
+    width: 40%;
+    display: grid;
+    place-items: center;
+}
+.image-container-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+}
+.main-image-game {
+    width: 16vw;
+    height: auto;
+}
+#game-scissor {
+    width: 8vw;
+    margin-bottom: 3vh;
+    transform: rotate(180deg);
+}
+#game-rock {
+    width: 8vw;
+    margin-right: 2vw;
+}
+#game-paper {
+    width: 8vw;
+}
+.choices-img {
+    width: 2vw;
+    height: auto;
+    /* background-color: antiquewhite; */
+    padding: 4px;   
+    cursor: pointer;
+}
+.rotate-game-img {
+    animation-name: rotate;
+    animation-duration: 2000ms;
+    width: 16vw;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    } 
+    to {
+        transform: rotate(360deg);
+    }
+}

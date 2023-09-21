@@ -1,0 +1,17 @@
+.loader-main {
+    display: grid;
+    place-items: center;
+}
+.loader-main > img {
+    animation: rotate 1000ms linear 0ms infinite;
+    width: 18vw;
+    height: auto;
+    margin-top: 30vh;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }to {
+        transform: rotate(360deg);
+    }
+}
