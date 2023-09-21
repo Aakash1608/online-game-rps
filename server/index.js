@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path')
 const app = express();
 const cors = require('cors')
 const { createServer } = require('http');
@@ -14,12 +15,12 @@ const io = new Server(server, {
         origin: "*"
     }
 });
-
+const __dirname = path.resolve()
 app.use(express.static("public"));
 
 
-app.get('/api-v1/', (req, res) => {
-    res.status(200).json({msg: 'hello'})
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, "frontend/build/index.html"))
 })
 let groupQ = [];
 let groupListResult = [];
@@ -259,6 +260,6 @@ io.on('connection', (socket) => {
     })
 })
 
-server.listen('8000', () => {
+server.listen(process.env.PORT || 8000, () => {
     console.log("Server Running on Port 8000")
 })

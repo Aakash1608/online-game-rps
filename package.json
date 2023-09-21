@@ -1,0 +1,22 @@
+{
+  "name": "tut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd server && npm install && cd ../client && npm install",
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aakash1608/online-game-rps.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aakash1608/online-game-rps/issues"
+  },
+  "homepage": "https://github.com/Aakash1608/online-game-rps#readme"
+}
