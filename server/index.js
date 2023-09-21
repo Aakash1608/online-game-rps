@@ -15,12 +15,12 @@ const io = new Server(server, {
         origin: "*"
     }
 });
-const __dirname = path.resolve()
-app.use(express.static("public"));
+
+app.use(express.static(path.join(__dirname, "..", "client", "build")));
 
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, "frontend/build/index.html"))
+app.use((req, res, next) => {
+    res.sendFile(path.join(__dirname, "..", "client", "build", "index.html"))
 })
 let groupQ = [];
 let groupListResult = [];
